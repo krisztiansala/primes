@@ -11,9 +11,11 @@ function isPrime(n: number) {
 
 export function getPrimesFromInterval(end: number, beginning = 0) {
     if (beginning > end || end < 2) return [];
-    if (end == 2) return [2];
-    if (beginning == 0) beginning = 3;
     let primes = [];
+
+    if (beginning <= 2) primes.push(2);
+    if (beginning % 2 === 0) beginning++;
+
     for (let i = beginning; i <= end; i += 2) {
         if (isPrime(i)) primes.push(i);
     }
