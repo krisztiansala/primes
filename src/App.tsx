@@ -52,11 +52,12 @@ function App() {
   return (
     <div className="App">
       <h1>Primes</h1>
-
-      <p className="info">
-        Add a number to get the prime numbers up to it. This app will memorize the previous operations.
-        Memorized results will be colored green and have a star suffix.
-      </p>
+      <div className="container">
+        <p className="info">
+          Add a number to get the prime numbers up to it. This app will memorize the previous operations.
+          Memorized results will be colored green and have a star suffix.
+        </p>
+      </div>
       <div className="card">
         <div>
           <input
